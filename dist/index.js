@@ -17,6 +17,8 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const JWT_SECRET = "12345rtf";
 const db_1 = require("./db");
 const app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.use(express_1.default.urlencoded({ extended: true }));
 app.post("/api/v1/signup", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const username = req.body.username;
     const password = req.body.password;
@@ -44,4 +46,4 @@ app.get("/api/v1/content", (req, res) => { });
 app.post("/api/v1/brain/:shareLink", (req, res) => { });
 app.get("/api/v1/brain/:shareLink", (req, res) => { });
 app.get;
-app.listen(3001);
+app.listen(3000);
