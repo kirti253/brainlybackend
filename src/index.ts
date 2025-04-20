@@ -47,7 +47,6 @@ app.get("/api/v1/content", userMiddleware, async (req, res) => {
     "userId",
     "username"
   );
-  res.json(content);
 });
 app.delete("/api/v1/content", userMiddleware, async (req, res) => {
   const contentId = req.body.contentId;
